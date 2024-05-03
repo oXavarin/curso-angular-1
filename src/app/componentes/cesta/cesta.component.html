@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-xs-100">
+        <app-cesta-edit>
+
+        </app-cesta-edit>
+        <hr>
+        <ul class="list-group" *ngIf="ingredientes.length > 0">
+            <a (click)="anadirIngrediente(item)" class="list-group-item" style="cursor: pointer;" *ngFor="let item of ingredientes">
+                {{item.nombre}} ({{item.cantidad}})
+            </a>
+        </ul>
+    </div>
+</div>

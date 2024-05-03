@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <img src="" alt="" class="img-responsive">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h1>Nombre de receta</h1>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="btn-group">
+            <button class="btn btn-primary dropdown-toggle" (click)="abierto= !abierto">
+                Opciones<span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" [ngStyle]="{display: abierto ? 'block' : 'none'}">
+                <li><a href="#">A la cesta</a></li>
+                <li><a href="#">Editar receta</a></li>
+                <li><a href="#">Borrar receta</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        Descripcion
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        Ingredientes
+    </div>
+</div>

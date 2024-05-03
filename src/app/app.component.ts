@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges } from '@angular/core';
+import { Ingrediente } from './componentes/shared/ingredientes.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'curso-angular-1';
+  seleccionado: string = "receta";
+
+  onSeleccionado(seleccionado: string): void {
+    this.seleccionado = seleccionado;
+  }
+
+  ingrediente_recibido(ingrediente: Ingrediente): void {
+    
+  }
+
 }
