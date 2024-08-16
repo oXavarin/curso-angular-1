@@ -1,0 +1,11 @@
+<a href="#" class="list-group-item" (click)="receta_seleccionada(receta, $event)">
+    <div class="media">
+        <div class="media-left">
+            <img class="media-object" src="{{receta.imagen}}" alt="" style="width: 100px;height: 100px; object-fit: cover;">
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading text-left">{{receta.nombre}}</h4>
+            <p class="text-left">{{receta.descripcion}}</p>
+        </div>
+    </div>
+</a>

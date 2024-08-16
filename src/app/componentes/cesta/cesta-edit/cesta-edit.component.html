@@ -1,45 +1,42 @@
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <form>
-
+        <form #formulario="ngForm">
             <div class="row">
-
-
                 <div class="row">
                     <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 form-group text-left">
                         <label for="name">Nombre</label>
-                        <input type="text" name="" id="name" class="form-control">
+                        <input type="text" name="nombree" id="nombre" class="form-control" ngModel
+                        #nameInput>
                     </div>
                 </div>
 
 
 
                 <div class="row">
-                    <div class="col-xs-2º col-sm-2 col-md-2 col-lg-2 form-group text-left">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 form-group text-left">
                         <label for="cantidad">Cantidad</label>
-                        <input type="text" name="" id="cantidad" class="form-control">
+                        <input type="text" name="cantidadd" id="cantidad" class="form-control" ngModel
+                        #cantidadInput>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-left">
-                        <button class="btn btn-success">
+                        <button type="button" class="btn btn-success" (click)="add()"> 
                             Añadir
                         </button>
                         <button class="btn btn-danger">
                             Eliminar
                         </button>
-                        <button class="btn btn-primary">
+                        <button type="button" class="btn btn-primary" (click)="clear()">
                             Limpiar
                         </button>
                     </div>
                 </div>
 
-
-
-
             </div>
 
         </form>
+
     </div>
 </div>

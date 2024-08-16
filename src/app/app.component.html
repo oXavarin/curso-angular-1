@@ -4,16 +4,16 @@
     <div class="row">
         <div class="col-md-12 text-center">
 
-            <div class="row" *ngIf="seleccionado ==='receta'">
+            <div class="row" >
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <app-receta></app-receta>
+                    <app-receta *ngIf="seleccionado == 'receta'"></app-receta>
                 </div>
             </div>
 
 
-            <div class="row" *ngIf="seleccionado !== 'receta'">
+            <div class="row" >
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <app-cesta (ingrediente_a_enviar)="ingrediente_recibido($event)"></app-cesta>
+                    <app-cesta *ngIf="seleccionado == 'cesta'"></app-cesta>
                 </div>
             </div>
 

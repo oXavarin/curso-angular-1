@@ -13,15 +13,21 @@ export class CestaComponent implements OnInit {
     new Ingrediente("Pimiento", 1)
   ];
 
+  ingrediente_seleccionadoo!: Ingrediente;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  @Output() ingrediente_a_enviar = new EventEmitter<Ingrediente>();
+  ingrediente_engadir(datos: Ingrediente): void {
+    console.log(datos);
+    
+    this.ingredientes.push(datos);
+  }
 
-  anadirIngrediente(ingrediente: Ingrediente) {
-    this.ingrediente_a_enviar.emit(ingrediente);
+  ingrediente_seleccionado(ingrediente: Ingrediente): void {
+    this.ingrediente_seleccionadoo = ingrediente;
   }
 
 }

@@ -1,11 +1,11 @@
 <div class="row">
     <div class="col-xs-100">
-        <app-cesta-edit>
+        <app-cesta-edit (ingrediente_a_engadir)="ingrediente_engadir($event)">
 
         </app-cesta-edit>
         <hr>
         <ul class="list-group" *ngIf="ingredientes.length > 0">
-            <a (click)="anadirIngrediente(item)" class="list-group-item" style="cursor: pointer;" *ngFor="let item of ingredientes">
+            <a appBetterHighlight class="list-group-item" style="cursor: pointer;" (click)="ingrediente_seleccionado(item)" *ngFor="let item of ingredientes" >
                 {{item.nombre}} ({{item.cantidad}})
             </a>
         </ul>

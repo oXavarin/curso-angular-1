@@ -11,6 +11,8 @@ import { RecetaListaComponent } from './componentes/receta/receta-lista/receta-l
 import { RecetaDetallesComponent } from './componentes/receta/receta-detalles/receta-detalles.component';
 import { RecetaItemComponent } from './componentes/receta/receta-lista/receta-item/receta-item.component';
 import { CestaEditComponent } from './componentes/cesta/cesta-edit/cesta-edit.component';
+import { FormsModule } from '@angular/forms';
+import { BetterHighlightDirective } from './styles/better-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -21,11 +23,13 @@ import { CestaEditComponent } from './componentes/cesta/cesta-edit/cesta-edit.co
     RecetaListaComponent,
     RecetaDetallesComponent,
     RecetaItemComponent,
-    CestaEditComponent
+    CestaEditComponent,
+    BetterHighlightDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

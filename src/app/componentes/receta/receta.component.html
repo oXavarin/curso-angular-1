@@ -1,15 +1,17 @@
 <div class="row">
-    
+
     <div class="col-md-6">
-        <app-receta-lista>
+        <app-receta-lista (receta_eveto)="receta_recibida($event)">
 
         </app-receta-lista>
     </div>
 
     <div class="col-md-6">
-        <app-receta-detalles>
-
+        <app-receta-detalles [receta]="receta" *ngIf="receta else clicka_receta">
         </app-receta-detalles>
+        <ng-template #clicka_receta>
+            <h1>Selecciona receta</h1>
+        </ng-template>
     </div>
 
 </div>

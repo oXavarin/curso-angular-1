@@ -1,16 +1,14 @@
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <img src="" alt="" class="img-responsive">
+        <img src="{{receta.imagen}}" alt="{{receta.nombre}}" class="img-responsive" style="width: 200px;height: 200px; object-fit: cover; margin: 0 auto;">
     </div>
 </div>
 
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <h1>Nombre de receta</h1>
+        <h1>{{receta.nombre}}</h1>
     </div>
 </div>
-
-
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="btn-group">
@@ -27,15 +25,18 @@
     </div>
 </div>
 
-
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        Descripcion
+        {{receta["descripcion"]}}
     </div>
 </div>
 
 <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        Ingredientes
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" *ngIf="receta.ingredientes.length > 0">
+        <h4>Ingredientes:</h4>
+
+        <div class="list-group" *ngFor="let item of receta.ingredientes">
+            <a appBetterHighlight class="list-group-item">{{item.nombre}}</a>
+        </div>
     </div>
 </div>

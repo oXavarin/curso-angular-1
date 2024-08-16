@@ -1,4 +1,4 @@
-import { Component, OnChanges } from '@angular/core';
+import { Component, EventEmitter, OnChanges, Output } from '@angular/core';
 import { Ingrediente } from './componentes/shared/ingredientes.model';
 
 @Component({
@@ -11,10 +11,6 @@ export class AppComponent {
 
   onSeleccionado(seleccionado: string): void {
     this.seleccionado = seleccionado;
-  }
-
-  ingrediente_recibido(ingrediente: Ingrediente): void {
-    
   }
 
 }

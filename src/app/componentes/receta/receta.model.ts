@@ -16,4 +16,5 @@ export class Receta {
     public agregarIngrediente(ingrediente: Ingrediente) {
         this.ingredientes.push(ingrediente);
     }
+
 }

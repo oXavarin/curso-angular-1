@@ -8,21 +8,9 @@
 </div>
 <br>
 <div class="row">
+    <app-receta-item class="col-md-12 list-group" *ngFor="let item of recetas" [receta]="item"
+        (receta_eveto)="receta_seleccionada(item)">
 
-    <div class="col-md-12 list-group" *ngFor="let item of recetas">
-        <a href="#" class="list-group-item">
-            <div class="media">
-                <div class="media-left">
-                    <img class="media-object" src="{{item.imagen}}" alt="" style="max-height: 100px;">
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading text-left">{{item.nombre}}</h4>
-                    <p class="text-left">{{item.descripcion}}</p>
-                    <ul class="list-group">
-                        <li class="list-group-item" *ngFor="let ingrediente of item.ingredientes">{{ingrediente.nombre}}</li>
-                    </ul>
-                </div>
-            </div>
-        </a>
-    </div>
+    </app-receta-item>
+
 </div>
